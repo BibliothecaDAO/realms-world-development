@@ -2,6 +2,8 @@ import { defineConfig } from "vocs";
 
 export default defineConfig({
   title: "Realms World L3 Network",
+  iconUrl: "/RealmsWorld.svg",
+  logoUrl: "/RealmsWorld.svg",
   topNav: [
     { text: "Dojo", link: "https://dojoengine.org" },
     {
