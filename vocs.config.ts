@@ -28,6 +28,10 @@ export default defineConfig({
       link: "/getting-started",
     },
     {
+      text: "Constants",
+      link: "/constants",
+    },
+    {
       text: "Wallets",
       link: "/browser-wallets",
     },
