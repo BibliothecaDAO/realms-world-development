@@ -3,14 +3,19 @@ layout: landing
 ---
 
 import { HomePage } from 'vocs/components'
+import { Footer } from '../components/Footer'
 
 <HomePage.Root>
   <HomePage.Logo />
-  <HomePage.Tagline>Realms World Docs</HomePage.Tagline>
+  <HomePage.Tagline>An L3 home to a multiverse of onchain games.</HomePage.Tagline>
   {/* <HomePage.InstallPackage name="vocs" type="init" /> */}
-  <HomePage.Description>Development on the World</HomePage.Description>
+  <HomePage.Description>This is documentation to get your started.</HomePage.Description>
   <HomePage.Buttons>
     <HomePage.Button href="/about" variant="accent">Get started</HomePage.Button>
     <HomePage.Button href="https://github.com/wevm/vocs">GitHub</HomePage.Button>
   </HomePage.Buttons>
 </HomePage.Root>
+
+::sponsors
+
+<Footer />
