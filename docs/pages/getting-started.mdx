@@ -1,3 +1,9 @@
+import { Callout } from 'vocs/components'
+
+<Callout type="note">
+  This is an alpha release. Reach out in the discord for more information.
+</Callout>
+
 # Get Building
 
 Realms.World L3 works the same as Starknet with a key difference.
@@ -104,4 +110,16 @@ private_key = "<>" // [!code focus]
 
 # World address (optional if you want to deploy to the cannonical world)
 world_address = "<>" // [!code focus]
+```
+
+#### 5. Deploy!
+
+Now you can deploy! Use the dojo cli to deploy your contract to the network.
+
+<Callout type="tip">
+  In production all apps will exist within the world contract, however for testing you can deploy a world like you would on a regular Katana network.
+</Callout>
+
+```bash
+sozo migrate
 ```
