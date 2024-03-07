@@ -1,4 +1,4 @@
-import { Callout } from 'vocs/components'
+import { Callout } from "vocs/components";
 
 <Callout type="note">
   This is an alpha release. Reach out in the discord for more information.
@@ -14,13 +14,11 @@ The designated fee token in the world is the Lords Token, which means you will n
 
 You must have this in your balance to deploy a contract, call a contract, or do anything on the network.
 
-
 #### The Fee Token Architecture
 
 The Lords token on the network is a dojo-specific ERC20 token. This allows us to use the token natively within the Dojo framework! Pretty slick...
 
 [insert flowchart of how this works]
-
 
 ## Create an Account and Get Some Lords
 
@@ -31,16 +29,32 @@ We will be doing four steps to get started developing on the Realms.World L3 net
 3. Deploy Account
 4. Set up your Scarb.toml
 
-
 #### 1. Create Account Details
 
 There are many ways to create an account on a Starknet network, and the ability to do this will be baked into the Dojo CLI framework. However, as of this writing, this is not available, so we need to use a script to do this.
 
-Clone this scripts repo [here](https://github.com/dojoengine/world-scripts).
+Clone and navigate to this scripts repo [here](https://github.com/dojoengine/world-scripts).
+
+```bash
+git clone https://github.com/dojoengine/world-scripts
+cd world-scripts
+```
 
 Note: You will need to install [bun](https://bun.sh/) in order to run these scripts.
 
-Run the script, and it will generate Account details for you in the .env file.
+Create a file named `.env` in your `world-scripts` directory and add the following lines with a simple copy-paste.
+
+`NODE_URL=https://api.cartridge.gg/x/realms/katana 
+NETWORK_FEE_TOKEN=0x51205c5e6ac3ad5691c28c0c5ffcdd62c70bddb63612f75a4bac9b2a85b9449 
+ACCOUNT_CLASS_HASH=0x05400e90f7e0ae78bd02c77cd75527280470e2fe19c54970dd79dc37a9d3645c`
+
+Install necessary dependencies using bun.
+
+```bash
+bun install
+```
+
+Run the script using the command below, and it will generate Account details for you in the .env file.
 
 ```bash
 bun run create
@@ -65,6 +79,8 @@ Now that you have some Lords in your account, you can deploy your account to the
 ```bash
 bun run deploy
 ```
+
+Welcome to Realms L3.
 
 #### 4. Setup your Scarb.toml
 
@@ -103,7 +119,8 @@ world_address = "<>" // [!code focus]
 Now you can deploy! Use the dojo cli to deploy your contract to the network.
 
 <Callout type="tip">
-  In production all apps will exist within the world contract, however for testing you can deploy a world like you would on a regular Katana network.
+  In production all apps will exist within the world contract, however for
+  testing you can deploy a world like you would on a regular Katana network.
 </Callout>
 
 ```bash
