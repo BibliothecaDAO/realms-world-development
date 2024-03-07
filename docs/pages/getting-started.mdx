@@ -6,63 +6,49 @@ import { Callout } from 'vocs/components'
 
 # Get Building
 
-Realms.World L3 works the same as Starknet with a key difference.
+Realms.World L3 works the same as Starknet, with a key difference: The Fee Token.
 
-### Fee Token
+### Fee Token - Lords
 
-The designated Fee token in the world is the Lords Token, which means you will need to have some of these Lords available.
+The designated fee token in the world is the Lords Token, which means you will need to have some of these Lords available in order to develop on the network.
 
 You must have this in your balance to deploy a contract, call a contract, or do anything on the network.
 
 
 #### The Fee Token Architecture
 
-The Lords token on the network is a dojo specific erc20 token. This allows us to use the token natively within the dojo framework! Pretty slick...
+The Lords token on the network is a dojo-specific ERC20 token. This allows us to use the token natively within the Dojo framework! Pretty slick...
 
 [insert flowchart of how this works]
 
 
-#### Implications of this when developing
+## Create an Account and Get Some Lords
 
-You need to consider how the token is used. 
-
-
-## Create an Account and Get some Lords
-
-We will be doing three steps to get started developing on the Realms.World L3 network.
+We will be doing four steps to get started developing on the Realms.World L3 network.
 
 1. Create Account Details
 2. Get some Lords from the Faucet
-3. Deply Account
-4. Setup your Scarb.toml
+3. Deploy Account
+4. Set up your Scarb.toml
 
 
 #### 1. Create Account Details
 
-There are many ways to create an Account on a Starknet network, and the ability to do this will be baked into the dojo cli framework, however as of this writing this is not available so we need to use a script to do this.
+There are many ways to create an account on a Starknet network, and the ability to do this will be baked into the Dojo CLI framework. However, as of this writing, this is not available, so we need to use a script to do this.
 
 Clone this scripts repo [here](https://github.com/dojoengine/world-scripts).
 
 Note: You will need to install [bun](https://bun.sh/) in order to run these scripts.
 
-Run the script and it will output your account details like:
+Run the script, and it will generate Account details for you in the .env file.
 
 ```bash
 bun run create
 ```
 
-```bash
-ACCOUNT_PRIVATE_KEY=0x42b41d1fe426f14338067f14eacccb0590eeca87bff037c000f87e8174b3e06
-ACCOUNT_PUBLIC_KEY=0x2bc7bdbd128140f75c24728b55767b106a1e88bb408fd7f5727c93eaa8bc714
-ACCOUNT_ADDRESS=0x737d34811ee5f77ae95a50c152bcb47c64a3dc03939ec0a3d86b1d1d53caf31
-```
-
-Now `source .env` and you will have these variables available to you for the next step.
-
-
 #### 2. Get some Lords from the Faucet
 
-Head to [realms world faucet](https://realms-world-alpha-faucet.preview.cartridge.gg) and paste in your account address from the previous step and it will send you some Lords!
+Head to [Realms World faucet](https://realms-world-alpha-faucet.preview.cartridge.gg) and paste in your account address from the previous step and it will send you some Lords!
 
 ##### 2a. Confirm your balance
 
@@ -123,3 +109,7 @@ Now you can deploy! Use the dojo cli to deploy your contract to the network.
 ```bash
 sozo migrate
 ```
+
+Success! You have deployed your first contract to the Realms.World L3 network.
+
+### Next Steps

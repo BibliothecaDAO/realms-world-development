@@ -21,23 +21,35 @@ export default defineConfig({
   sidebar: [
     {
       text: "About",
-      link: "/about",
+      collapsed: false,
+      items: [
+        {
+          text: "Background",
+          link: "/about",
+        },
+        {
+          text: "Roadmap",
+          link: "/roadmap",
+        },
+      ],
     },
     {
-      text: "Getting Started",
-      link: "/getting-started",
-    },
-    {
-      text: "Constants",
-      link: "/constants",
-    },
-    {
-      text: "Wallets",
-      link: "/browser-wallets",
-    },
-    {
-      text: "Roadmap",
-      link: "/roadmap",
+      text: "Developing",
+      collapsed: false,
+      items: [
+        {
+          text: "Getting Started",
+          link: "/getting-started",
+        },
+        {
+          text: "Constants",
+          link: "/constants",
+        },
+        {
+          text: "Wallets",
+          link: "/browser-wallets",
+        },
+      ],
     },
   ],
   editLink: {
@@ -50,7 +62,7 @@ export default defineConfig({
   description: "A Multiverse of onchain games",
   sponsors: [
     {
-      name: "Built in collaboration with",
+      name: "Built with",
       height: 60,
       items: [
         [
@@ -59,13 +71,13 @@ export default defineConfig({
             link: "https://realms.world",
             image: "/RealmsWorld.svg",
           },
+        ],
+        [
           {
             name: "Cartridge",
             link: "https://cartridge.gg/",
             image: "/Cartridge.svg",
           },
-        ],
-        [
           {
             name: "Starknet",
             link: "https://starknet.io/",
