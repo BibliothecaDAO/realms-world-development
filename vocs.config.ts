@@ -49,6 +49,10 @@ export default defineConfig({
           text: "Wallets",
           link: "/browser-wallets",
         },
+        {
+          text: "Deploying Arbitrary Contracts",
+          link: "/deploy-contracts",
+        },
       ],
     },
   ],

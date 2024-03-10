@@ -1,0 +1,60 @@
+# Deploy Arbitrary Starknet Contracts
+
+Realms.World is another Starknet network meaning any Starknet contract can be deployed to it. This guide will show you how to deploy any contract to Realms.World
+
+### Install Starkli
+
+It is worth familiarizing yourself with the [Starkli](https://book.starkli.rs/installation) documentation before proceeding.
+
+```bash
+curl https://get.starkli.sh | sh
+```
+
+### Setting RPC
+
+```bash
+export STARKNET_RPC="https://api.cartridge.gg/x/realms/katana/"
+```
+
+
+### Create a new keypair
+```bash
+starkli signer keystore new /path/to/keystore 
+
+export STARKNET_KEYSTORE="/path/to/keystore"
+```
+
+### Create a new account
+```bash
+starkli account oz init account --keystore $STARKNET_KEYSTORE
+```
+
+### Deploy the Account Contract
+
+Remember Realms L3 runs on the Lords token, so you will need to fund the account in this step using the [faucet](https://internal-explorer.preview.cartridge.gg/).
+
+```bash
+starkli account deploy account --keystore $STARKNET_KEYSTORE 
+```
+
+## Deploying other Contracts
+
+Now we have our Account setup we can deploy other contracts!
+
+You will just need to have the `contract.contract_class.json` file!
+
+### Declare
+The `declare` command is used to declare a contract class on the Realms.World network. This command requires the contract class JSON file.
+
+This step will output a `class hash` which is used to deploy the contract.
+
+```bash
+starkli declare $CLASS_HASH_JSON --keystore keys --account account --rpc https://api.cartridge.gg/x/realms/katana/
+```
+
+### Deploy
+Take the class hash from the previous step and use it to deploy the contract. If you get errors, check your constructor call data, this is where most issues arise.
+
+```bash
+starkli deploy <class_hash> <constructor_call_data> --account account --keystore keys --rpc https://api.cartridge.gg/x/realms/katana/
+```
