@@ -18,6 +18,16 @@ export default defineConfig({
   font: {
     google: "Poppins",
   },
+  theme: {
+    variables: {
+      color: {
+        textAccent: {
+          light: "#071E3F",
+          dark: "#ffa9cc",
+        },
+      },
+    },
+  },
   sidebar: [
     {
       text: "About",
@@ -55,6 +65,32 @@ export default defineConfig({
         },
       ],
     },
+    {
+      text: "Ecosystem",
+      collapsed: false,
+      items: [
+        {
+          text: "Games",
+          link: "/games",
+        },
+      ],
+    },
+  ],
+  socials: [
+    {
+      icon: "github",
+
+      link: "https://github.com/BibliothecaDAO/realms-world-development",
+    },
+    {
+      icon: "x",
+
+      link: "https://twitter.com/lootrealms",
+    },
+    {
+      icon: "discord",
+      link: "https://discord.gg/realmsworld",
+    },
   ],
   editLink: {
     pattern:
@@ -63,7 +99,7 @@ export default defineConfig({
   },
   ogImageUrl:
     "https://vocs.dev/api/og?logo=%logo&title=%title&description=%description",
-  description: "A Multiverse of onchain games",
+  description: "A world-specific L3 network for Realms World.",
   sponsors: [
     {
       name: "Built with",

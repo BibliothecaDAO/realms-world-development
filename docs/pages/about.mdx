@@ -1,22 +1,29 @@
+![announcement](/announcement.png)
+
 # Realms.World L3 Network
 
-Realms L3 exists to enable the ambitious Realms Autonomous World project.
+Realms L3 exists to enable the ambitious Realms Autonomous World. It is a collaboration between Bibliotheca DAO and Cartridge, designed and built around the [dojo](https://github.com/dojoengine/dojo) stack. This stack has been optimized for high-performance onchain gaming, allowing Realms L3 to support the demanding requirements of the autonomous world.
 
 ## What is the Realms World L3?
 
-Realms.World L3 stands as a of high performance zkvm network, specifically engineered to support high-performance onchain gaming. This network operates as a Starknet sequencer-based platform, ensuring that any Starknet contract can seamlessly run within its ecosystem. Sitting atop the public Starknet L2, it rolls up it's state onto Starknet. This allows for low transactions fees and high performance._createMdxContent
+Realms.World L3 stands as a of high performance zkvm network, specifically engineered to support high-performance onchain gaming. The network operates as a Starknet sequencer, ensuring that any Starknet contract can seamlessly run on the network. Sitting atop the public Starknet L2, it rolls-up it's state onto Starknet. This allows for low transactions fees and high performance.
 
-The entire stack is opensource and welcomes contributions. 
+The entire stack is opensource and welcomes contributions. Find out more here [dojo](https://github.com/dojoengine/dojo)
 
 ### The Network's Purpose
 
-The Realms L3 exists for the Realms.World ecosystem of games.
+The Realms L3 exists for the Realms.World ecosystem of games, however it is a permissionless network that anyone can deploy contracts onto. 
 
 ### The Network Architecture
 
-Realms L3 is a Katana sequencer network, that settles it's state to the Public Starknet.
+Realms L3 is a Katana sequencer network, that settles it's state to the Public Starknet. The following chart shows the network architecture. More details around the 'Dungeon' part of the world will come soon.
 
+![announcement](/architecture.png)
 
+### Security 
+It is worth touching on the security of the network. Realms L3 is a StarkNet VM. We verify the integrity of the network by submitting proofs to StarkNet L2. Since we can verify the network state of StarkNet, we can inherit significantly higher security guarantees compared to those of an optimistic rollup. The following chart shows the security model of the network.
+
+![announcement](/zk-op.png)
 ### The Network Status
 
 Realms L3 is currently in a testnet phase, with a mainnet launch planned for Q3 2024.
